@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+ background: linear-gradient(135deg, rgb(168, 30, 30), rgb(253, 223, 223), red);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-family: 'Times New Roman', Times, serif;
+}
+.body {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-top: 100px;
+ flex-direction: column;
+ gap: 20px;
+}
+h2 {
+ animation: 1s blink linear infinite;
+ display: flex;
+ justify-content: center;
+}
+
+.birthdayCard {
+ position: relative;
+ width: 250px;
+ height: 490px;
+ cursor: pointer;
+ transform-style: preserve-3d;
+ transition: 1s;
+ perspective: 1000px;
+}
+.cardFront {
+ position: absolute;
+ background-color: #d8ecfd;
+ width: 250px;
+ height: 350px;
+ overflow: hidden;
+ transform-origin: left;
+ transition: .6s;
+}
+.cardFront h2 {
+  color: #121035;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+.happy {
+ font-family: 'Times New Roman', Times, serif;
+ text-align: center;
+ font-size: 21px;
+ margin: 30px;
+ transition: .1s;
+}
+.image {
+  text-align: center; 
+  margin-top: 10px; 
+} 
+.image img {
+  max-width: 100%; 
+  width: 80%;
+  height: auto; 
+  border-radius: 50%; 
+  border: 5px solid #117568; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+.cardInside {
+ position: absolute;
+ background-color: #ffcfcf;
+ width: 250px;
+ height: 350px;
+ z-index: -1;
+ left: 0;
+ top: 0;
+ box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+}
+p {
+ font-family: 'Times New Roman', Times, serif;
+ margin: 3px 10px 10px 30px;
+ color: #333;
+ text-align: justify;
+}
+.name {
+ position: absolute;
+ left: 150px;
+ color: #333;
+ text-decoration: underline;
+}
+.back {
+ font-family: 'Times New Roman', Times, serif;
+ color: #333;
+ text-align: start;
+ margin: 30px;
+ font-size: 12px;
+}
+#playButton {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #3498db; 
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+#playButton:hover {
+  background-color: #2980b9; 
+}
+.birthdayCard:hover {
+ transform: perspective(2500px) rotate(5deg);
+ box-shadow: inset 100px 20px 100px rgba(0, 0, 0, .2), 0 10px 100px rgba(0, 0, 0, 0.5);
+}
+.birthdayCard:hover .cardFront {
+ transform: rotateY(-160deg);
+}
+.birthdayCard:hover .happy {
+ visibility: hidden;
+}
+
+@keyframes blink {
+ 0% {
+  color: white;
+ }
+
+ 20% {
+  color: rgb(36, 203, 245);
+ }
+
+ 40% {
+  color: rgb(164, 19, 231);
+ }
+
+ 60% {
+  color: red;
+ }
+
+ 80% {
+  color: rgb(65, 26, 45);
+ }
+
+ 100% {
+  color: blue;
+ }
+} 
+footer{
+ font-size: 10px;
+ color: white;
+ position: absolute;
+ bottom: 0px;
+}
+footer a{
+ color: white;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teachers' Day Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="body">
+    <button id="playButton">Play Audio</button>
+    <div class="birthdayCard">
+      <div class="cardFront">
+        <h2>Happy Teachers' Day</h2>
+        <div class="image">
+          <img src="Randy.jpg" alt="image">
+        </div>
+      </div>
+      <div class="cardInside">
+        <p contenteditable="true">Dear sir Randy,</p>
+        <p contenteditable="true">
+          "HAPPY TEACHER'S DAY PO SIR!"
+          "<br>Thank you for your endless patience, wisdom, and guidance. Your dedication inspires us to learn, dream, and grow. You not only teach lessons 
+          but also shape lives with kindness and care. 
+          We are grateful for everything you do to brighten our future. With respect,<br>
+        </p>
+        <p contenteditable="true" class="name">Lyka</p>
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio" src="Salamat Guro (Teacher's Day song) by Ate Jhen [8GUnpoimoYM].mp3"></audio>
+  <script>
+    const playButton = document.getElementById("playButton");
+    const audio = document.getElementById("audio");
+
+    playButton.addEventListener("click", function () {
+      if (audio.paused) {
+        audio.play();
+        playButton.textContent = "Pause audio";
+        playButton.classList.add("playing");
+      } else {
+        audio.pause();
+        playButton.textContent = "Play audio";
+        playButton.classList.remove("playing"); 
+      }
+    });
+  </script>
+</body>
+</html>
