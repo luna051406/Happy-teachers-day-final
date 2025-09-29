@@ -22,7 +22,7 @@ HTML5 - Card structure; CSS3 - Styling and animations and JavaScript (ES6) - Int
 HOW TO USE!
 
 Open the live site:
-👉 git@github.com:luna051406/Happy-teachers-day.git
+👉 https://luna051406.github.io/Happy-teachers-day-final/
 Enjoy the card animations and message.
 
 
